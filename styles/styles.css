@@ -48,6 +48,7 @@ body {
 h1 {
     font-size: 48px;
     text-align: center;
+    margin: 0 auto;
 }
 
 h2 {
@@ -63,20 +64,23 @@ h2 {
     background-color:#E5AF42;
     text-align: center;
     line-height: 3;
-    border-width: 1px;
+    border: 1px solid;
     border-color: black;
 }
 
-a:link, a:hover, a:visited, a:active {
-    color: black;
+a {
     text-decoration: none;
+    color: black;
+    display: inline-block;
+    height: 100%;
+    box-sizing: border-box;
 }
 
-footer.a:hover {
+footer a:hover {
     text-decoration: underline;
 }
 
-main.a:hover {
+main a:hover {
     text-decoration: underline;
 }
 
@@ -107,11 +111,10 @@ header {
     margin-bottom: 25px;
 }
 
-header.img {
+header img{
     width: 100px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: 25px;
+    height: 100px;
+    padding: 25px 0 25px 25px;
 }
 
 header.h1 {
@@ -124,6 +127,8 @@ footer {
     line-height: 60px;
     font-weight: 200;
     text-align: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -146,18 +151,16 @@ footer {
     flex: 50%;
 }
 
-img {
-    text-align: right;
+.index img {
     width: 300px;
-    margin-left: 25px;
-    margin-bottom: 50px;
+    margin: 0 0 50px 25px;
 }
 
-h2 {
-    line-height: 100%;
+.index h2 {
+    line-height: 25px;
 }
 
-p {
+.index p {
     margin-bottom: 12px;
 }
 
@@ -188,6 +191,8 @@ p {
     width: 600px;
     text-align: center;
     font-size: 18px;
+    margin: 0 auto;
+    display: flex;
 }
 
 .day-selectors {
@@ -204,9 +209,7 @@ p {
     margin-left: 25px;
 }
 
-.fake-button blue-hover {
-    border-width: 1px;
-    border-color: black;
+#clear-button {
     width: 200px;
 }
 
@@ -222,6 +225,10 @@ p {
 .day-selector {
     margin-left: auto;
     margin-right: auto;
+}
+
+.clicked {
+   background: #E5AF42; 
 }
 
 
@@ -240,52 +247,39 @@ p {
     - the edges of the button will line up exactly with the text-area element. HINT: time for some math!
 */
 
-main {
+.contact {
     height: 420px;
-    text-align: center;
-}
-
-.row {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.column{
-    flex: 50%;
-}
-
-label {
+.contact label {
     width: 150px;
     text-align: right;
 }
 
-input {
+.contact input {
     width: 300px;
-    margin-bottom: 24px;
-    line-height: 24px;
-    font-size: 16px;
-    border-width: 1px;
-    border-color: black;
-
-textarea {
-    line-height: 24px;
-    font-size: 16px;
-    border-width: 1px;
-    border-color: black;
-    margin-bottom: 24px;
 }
 
 
-button {
-    line-height: 24px;
-    font-size: 16px;
-    border-width: 1px;
-    border-color: black;
-    margin-bottom: 24px;
-    margin-right: auto;
-    margin-left: auto;
+.contact textarea {
+    height: 150px;
+    width: 300px;
 }
 
-.fake-button.blue-hover {
-    margin-right: 500px;
+
+.contact input, textarea {
+    margin:0 0 24px 24px;
+    line-height: 24px;
+    font-size: 16px;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    
+.fake-button {
+    width: 450px;
+    display: block;
 }
 
